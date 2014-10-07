@@ -14,8 +14,6 @@ public class OperationsHandlerTest {
         operaciones = new OperationsHandler();
         operaciones.addOperation(new Summation(3, 2));
         operaciones.addOperation(new Summation(6, 5));
-        operaciones.addOperation(new Multiplication(4, 5));
-        operaciones.addOperation(new Subtraction(3, 1));
     }
 
     @Test
@@ -26,7 +24,7 @@ public class OperationsHandlerTest {
 
     @Test
     public void testTotal() {
-        assertEquals(34, operaciones.total(), 10e-1);
+        assertEquals(16, operaciones.total(), 10e-1);
     }
 
 }

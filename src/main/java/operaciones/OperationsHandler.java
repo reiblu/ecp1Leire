@@ -9,7 +9,7 @@ public class OperationsHandler {
     }
     
     public void addOperation(Operation operation){
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < operations.length; i++) {
             if(operations[i]==null){
                 operations[i]=operation;
             }
@@ -17,14 +17,20 @@ public class OperationsHandler {
     }
     
     public void reset(){
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < operations.length; i++) {
            operations[i]=null; 
         }
         
     }
     
     public int total(){
-        return 0;
+        int result = 0;
+        for (Operation operation : operations) {
+            if(operation !=null){
+             result += operation.operar();
+            }
+        }
+        return result;
     }
     
 }
