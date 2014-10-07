@@ -26,6 +26,6 @@ public abstract class Vehiculo {
         return precio;
     }
     
-    public abstract int precio();
+    public abstract int calcularPrecio();
 
 }
