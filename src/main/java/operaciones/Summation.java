@@ -8,8 +8,8 @@ public class Summation extends Operation {
 
     @Override
     public int operar() {
-        
-        return this.getOperador1()+this.getOperador2();
+
+        return this.getOperador1() + this.getOperador2();
     }
 
 }

@@ -6,12 +6,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SummationTest extends OperationTest {
-    
+
     private Summation suma;
-    
+
     @Before
-    public void inicializar(){
-        suma = new Summation(3,4);
+    public void inicializar() {
+        suma = new Summation(3, 4);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package operaciones;
 
-public class Subtraction extends Operation{
+public class Subtraction extends Operation {
 
     public Subtraction(int operador1, int operador2) {
         super(operador1, operador2);
@@ -8,8 +8,8 @@ public class Subtraction extends Operation{
 
     @Override
     public int operar() {
-        // TODO Auto-generated method stub
-        return 0;
+
+        return this.getOperador1() - this.getOperador2();
     }
 
 }
