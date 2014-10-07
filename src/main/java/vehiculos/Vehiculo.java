@@ -4,13 +4,11 @@ public abstract class Vehiculo {
 
     private int id;
     private String descripcion;
-    private int precio;
     
-    public Vehiculo(int id, String descripcion, int precio) {
+    public Vehiculo(int id, String descripcion) {
         super();
         this.id = id;
         this.descripcion = descripcion;
-        this.precio = precio;
         
     }
 
@@ -21,11 +19,7 @@ public abstract class Vehiculo {
     public String getDescripcion() {
         return descripcion;
     }
-
-    public int getPrecio() {
-        return precio;
-    }
     
-    public abstract int calcularPrecio();
+    public abstract int calcularPrecio(int dias);
 
 }
