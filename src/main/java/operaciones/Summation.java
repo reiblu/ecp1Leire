@@ -9,7 +9,7 @@ public class Summation extends Operation {
     @Override
     public int operar() {
         
-        return 0;
+        return this.getOperador1()+this.getOperador2();
     }
 
 }
