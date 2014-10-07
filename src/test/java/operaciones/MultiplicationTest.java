@@ -8,15 +8,15 @@ import org.junit.Test;
 public class MultiplicationTest {
 
     private Multiplication multiplicacion;
-    
+
     @Before
-    public void inicializar(){
-        multiplicacion = new Multiplication(2,2);
+    public void inicializar() {
+        multiplicacion = new Multiplication(2, 2);
     }
-    
+
     @Test
     public void testOperar() {
-        assertEquals(4,multiplicacion.operar());
+        assertEquals(4, multiplicacion.operar());
     }
 
 }

@@ -8,8 +8,8 @@ public class Multiplication extends Operation {
 
     @Override
     public int operar() {
-        // TODO Auto-generated method stub
-        return 0;
+
+        return this.getOperador1() * this.getOperador2();
     }
 
 }
