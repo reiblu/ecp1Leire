@@ -8,12 +8,12 @@ public abstract class Operation {
 
     public Operation(int operador1, int operador2) {
         super();
-        this.operador1 = operador1;
+        this.setOperador1(operador1);
         this.operador2 = operador2;
     }
 
     public int Getoperador1() {
-        return this.operador1;
+        return this.getOperador1();
     }
 
     public int Getoperador2() {
@@ -21,5 +21,13 @@ public abstract class Operation {
     }
 
     public abstract int operar();
+
+    public int getOperador1() {
+        return operador1;
+    }
+
+    public void setOperador1(int operador1) {
+        this.operador1 = operador1;
+    }
 
 }
