@@ -2,28 +2,31 @@ package operaciones;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class OperationsHandlerTest {
 
-    @Test
-    public void testOperationsHandler() {
-        fail("Not yet implemented");
-    }
+    private OperationsHandler operaciones;
 
-    @Test
-    public void testAddOperation() {
-        fail("Not yet implemented");
+    @Before
+    public void inicializar() {
+        operaciones = new OperationsHandler();
+        operaciones.addOperation(new Summation(3, 2));
+        operaciones.addOperation(new Summation(6, 5));
+        operaciones.addOperation(new Multiplication(4, 5));
+        operaciones.addOperation(new Subtraction(3, 1));
     }
 
     @Test
     public void testReset() {
-        fail("Not yet implemented");
+       this.operaciones.reset();
+       assertEquals(0, operaciones.total(), 10e-1);
     }
 
     @Test
     public void testTotal() {
-        fail("Not yet implemented");
+        assertEquals(34, operaciones.total(), 10e-1);
     }
 
 }

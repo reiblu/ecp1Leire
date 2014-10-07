@@ -9,15 +9,22 @@ public class OperationsHandler {
     }
     
     public void addOperation(Operation operation){
-        
+        for (int i = 0; i < 6; i++) {
+            if(operations[i]==null){
+                operations[i]=operation;
+            }
+        }
     }
     
     public void reset(){
+        for (int i = 0; i < 6; i++) {
+           operations[i]=null; 
+        }
         
     }
     
-    public void total(){
-        
+    public int total(){
+        return 0;
     }
     
 }
