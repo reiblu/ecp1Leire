@@ -5,7 +5,6 @@ public abstract class Vehiculo {
     private int id;
     private String descripcion;
     private int precio;
-    private char categoria;
     
     public Vehiculo(int id, String descripcion, int precio) {
         super();
@@ -25,10 +24,6 @@ public abstract class Vehiculo {
 
     public int getPrecio() {
         return precio;
-    }
-
-    public char getCategoria() {
-        return categoria;
     }
     
     public abstract int precio();
