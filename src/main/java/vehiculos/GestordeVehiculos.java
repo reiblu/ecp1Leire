@@ -1,24 +1,31 @@
 package vehiculos;
 
-import java.util.HashMap;
-
 public class GestordeVehiculos {
-    
-    HashMap<Integer,Float> listaVehiculos;
+
+    private Vehiculo[] vehiculos;
 
     public GestordeVehiculos() {
-        
-        listaVehiculos = new HashMap<Integer,Float>();
-        
+
+        vehiculos = new Vehiculo[10];
+
     }
-    
-    public void addVehiculo(Vehiculo vehiculo){
-        
+
+    public void addVehiculo(Vehiculo vehiculo) {
+
+        for (int i = 0; i < this.vehiculos.length; i++) {
+            if (vehiculos[i] == null) {
+                vehiculos[i] = vehiculo;
+            }
+        }
+
     }
-    
-    public String allVehiculo(){
+
+    public String allVehiculo() {
+        String cadena;
+        for (int i = 0; i < vehiculos.length; i++) {
+            
+        }
         return null;
     }
-    
 
 }
