@@ -1,31 +1,37 @@
 package vehiculos;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class GestordeVehiculos {
 
-    private Vehiculo[] vehiculos;
+    private Map<Integer, Vehiculo> vehiculos;
 
     public GestordeVehiculos() {
 
-        vehiculos = new Vehiculo[10];
+        vehiculos = new HashMap<Integer, Vehiculo>();
 
     }
 
     public void addVehiculo(Vehiculo vehiculo) {
 
-        for (int i = 0; i < this.vehiculos.length; i++) {
-            if (vehiculos[i] == null) {
-                vehiculos[i] = vehiculo;
-            }
-        }
-
+       vehiculos.put(vehiculo.getId(), vehiculo);
     }
 
     public String allVehiculo() {
-        String cadena;
-        for (int i = 0; i < vehiculos.length; i++) {
-            
+        String cadena = "";
+        for (Vehiculo vehiculo : vehiculos.values()) {
+            cadena += vehiculo.getDescripcion();
+            cadena += "\n\n";
         }
-        return null;
+        
+        return cadena;
+    }
+
+    public int calcularPrecio(int id, int dias) {
+
+        return vehiculos.get(id).calcularPrecio(dias);
+        
     }
 
 }
