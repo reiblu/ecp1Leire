@@ -8,8 +8,11 @@ public class Bicicleta extends Vehiculo {
 
     @Override
     public int calcularPrecio(int dias) {
-        // TODO Auto-generated method stub
-        return 0;
+        if (dias < 3) {
+            return 3 * dias;
+        } else {
+            return (3*2)+(2*(dias-2));
+        }
     }
 
 }

@@ -8,8 +8,11 @@ public class Moto extends Vehiculo {
 
     @Override
     public int calcularPrecio(int dias) {
-        // TODO Auto-generated method stub
-        return 0;
+        if (dias < 7) {
+            return 8 * dias;
+        } else {
+            return (8 * 7) + (7 * (dias - 7));
+        }
     }
 
 }
